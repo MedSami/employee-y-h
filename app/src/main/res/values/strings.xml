@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">employee</string>
+    <string name="hint_identifiant">Votre Identifiant SVP</string>
+    <string name="hint_password">Votre Mot De Passe SVP</string>
+    <string name="hint_nom">Saisir votre nom SVP</string>
+    <string name="hint_prenom">Saisir votre prenom SVP</string>
 </resources>
