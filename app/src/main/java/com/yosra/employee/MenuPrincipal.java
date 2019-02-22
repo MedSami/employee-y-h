@@ -33,7 +33,9 @@ public class MenuPrincipal extends AppCompatActivity {
     btnEnvoyerCertif.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-
+            Intent i=new Intent(MenuPrincipal.this,EnvoyerCertif.class);
+            i.putExtra("idEmploye",idEmploye);
+            startActivity(i);
         }
     });
 

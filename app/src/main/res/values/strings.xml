@@ -6,4 +6,5 @@
     <string name="hint_prenom">Saisir votre prenom SVP</string>
     <string name="hint_nb_jour">Saisir nombre de jours SVP</string>
     <string name="hint_date">Saisir Date debut SVP</string>
+    <string name="hint_titre_image">Saisir Titre Image SVP</string>
 </resources>

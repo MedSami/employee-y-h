@@ -36,4 +36,12 @@ public interface ApiRequest {
             @Field("id") String id_employe
     );
 
+    /*************** Upload Certif *******************/
+    @FormUrlEncoded
+    @POST("UploadCertif.php")
+    Call<ResponseDataModel> UploadCertif(
+            @Field("title") String title,
+            @Field("image") String image,
+            @Field("id") String idEmploye
+    );
 }

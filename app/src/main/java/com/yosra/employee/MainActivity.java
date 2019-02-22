@@ -26,7 +26,8 @@ Button btnEntrer,btnInscrire;
 
     edtIdentifiant=findViewById(R.id.edtIdentifiant);
     edtPassword=findViewById(R.id.edtPassword);
-
+edtPassword.setText("yosra123");
+edtIdentifiant.setText("YosraH");
     btnEntrer=findViewById(R.id.btnEntrer);
     btnInscrire=findViewById(R.id.btnInscrire);
 
