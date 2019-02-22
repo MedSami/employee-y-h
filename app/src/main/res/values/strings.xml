@@ -4,4 +4,6 @@
     <string name="hint_password">Votre Mot De Passe SVP</string>
     <string name="hint_nom">Saisir votre nom SVP</string>
     <string name="hint_prenom">Saisir votre prenom SVP</string>
+    <string name="hint_nb_jour">Saisir nombre de jours SVP</string>
+    <string name="hint_date">Saisir Date debut SVP</string>
 </resources>

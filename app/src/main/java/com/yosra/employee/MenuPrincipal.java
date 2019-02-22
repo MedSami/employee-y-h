@@ -7,7 +7,8 @@ import android.view.View;
 import android.widget.Button;
 
 public class MenuPrincipal extends AppCompatActivity {
-Button btnDemandeConge,btnEnvoyerCertif;
+    Button btnDemandeConge,btnEnvoyerCertif;
+    String idEmploye;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -15,11 +16,16 @@ Button btnDemandeConge,btnEnvoyerCertif;
 
     btnDemandeConge=findViewById(R.id.btnDemandeConge);
     btnEnvoyerCertif=findViewById(R.id.btnEnvoyerCertif);
+        Bundle data = getIntent().getExtras();
+        if (data != null) {
+            idEmploye = data.getString("idEmploye");
 
+        }
     btnDemandeConge.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View view) {
             Intent i=new Intent(MenuPrincipal.this,DemandeConge.class);
+            i.putExtra("idEmploye",idEmploye);
             startActivity(i);
         }
     });

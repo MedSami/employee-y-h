@@ -60,7 +60,7 @@ Button btnEntrer,btnInscrire;
 
 
                                     Intent intent=new Intent(MainActivity.this,MenuPrincipal.class);
-                                    intent.putExtra("idUtilisateur",""+response.body().getResult().get(0).getId());
+                                    intent.putExtra("idEmploye",""+response.body().getResult().get(0).getId());
                                     startActivity(intent);
 
 

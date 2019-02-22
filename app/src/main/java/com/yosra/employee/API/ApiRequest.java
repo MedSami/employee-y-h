@@ -27,4 +27,13 @@ public interface ApiRequest {
             @Field("motdepasse") String password
     );
 
+    /*************** Demande Congé *******************/
+    @FormUrlEncoded
+    @POST("DemandeConge.php")
+    Call<ResponseDataModel> DemandeConge(
+            @Field("nbjours") String nbjours,
+            @Field("date") String date,
+            @Field("id") String id_employe
+    );
+
 }
