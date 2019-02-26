@@ -38,7 +38,7 @@ public interface ApiRequest {
 
     /*************** Upload Certif *******************/
     @FormUrlEncoded
-    @POST("UploadCertif.php")
+    @POST("uploadCertif.php")
     Call<ResponseDataModel> UploadCertif(
             @Field("title") String title,
             @Field("image") String image,

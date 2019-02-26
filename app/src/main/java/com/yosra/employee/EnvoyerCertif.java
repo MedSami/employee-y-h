@@ -8,6 +8,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Base64;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -60,7 +61,7 @@ private Bitmap bitmap;
         btnUpload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                    uploadImage();
             }
         });
 
@@ -96,18 +97,27 @@ private Bitmap bitmap;
         String image=imageToString();
         String image_title=imageTitle.getText().toString();
 
-        ApiRequest api= RetrofitServer.getClient().create(ApiRequest.class);
+        if(image_title.equals("")){
+            Toast.makeText(this, "Saisir titre Image", Toast.LENGTH_SHORT).show();
+            return;
+        }
+              ApiRequest api= RetrofitServer.getClient().create(ApiRequest.class);
         Call<ResponseDataModel> upload=api.UploadCertif(image_title,image,idEmploye);
         upload.enqueue(new Callback<ResponseDataModel>() {
             @Override
             public void onResponse(Call<ResponseDataModel> call, Response<ResponseDataModel> response) {
+                if (response.isSuccessful()){
                 Toast.makeText(EnvoyerCertif.this, response.body().getMessage(), Toast.LENGTH_SHORT).show();
-                img.setVisibility(View.GONE);
-                imageTitle.setText("");
-                imageTitle.setVisibility(View.GONE);
+                    img.setVisibility(View.GONE);
+                    imageTitle.setText("");
+                    imageTitle.setVisibility(View.GONE);
 
-                btnChoose.setEnabled(true);
-                btnUpload.setEnabled(false);
+                    btnChoose.setEnabled(true);
+                    btnUpload.setEnabled(false);
+
+                }else {
+                    Toast.makeText(EnvoyerCertif.this, "Not", Toast.LENGTH_SHORT).show();
+                }
             }
 
             @Override
