@@ -24,6 +24,7 @@
         android:layout_below="@+id/imageView2"
         android:inputType="textPersonName"
         android:visibility="gone"
+        android:drawableLeft="@drawable/ic_title_black_24dp"
         android:hint="@string/hint_titre_image" />
 
     <Button
@@ -31,6 +32,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/edtTitle"
+        android:drawableLeft="@drawable/ic_open_in_browser_black_24dp"
         android:text="Choisir Certif" />
 
     <Button
@@ -39,5 +41,6 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/btnChoisir"
         android:enabled="false"
+        android:drawableLeft="@drawable/ic_file_upload_black_24dp"
         android:text="Envoyer Certif" />
 </RelativeLayout>

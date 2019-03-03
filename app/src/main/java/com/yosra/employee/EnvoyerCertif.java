@@ -40,9 +40,9 @@ private Bitmap bitmap;
         setContentView(R.layout.activity_envoyer_certif);
 
         imageTitle=findViewById(R.id.edtTitle);
+        img=findViewById(R.id.imageView2);
         btnChoose=findViewById(R.id.btnChoisir);
         btnUpload=findViewById(R.id.btnUpload);
-        img=findViewById(R.id.imageView2);
 
         Bundle data = getIntent().getExtras();
         if (data != null) {
@@ -116,7 +116,7 @@ private Bitmap bitmap;
                     btnUpload.setEnabled(false);
 
                 }else {
-                    Toast.makeText(EnvoyerCertif.this, "Not", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(EnvoyerCertif.this, "not registred ", Toast.LENGTH_SHORT).show();
                 }
             }
 
